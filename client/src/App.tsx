@@ -128,7 +128,7 @@ function App() {
         </div>
 
         {/* Left Hand Document Management Panel */}
-        <div className={`w-full lg:w-[380px] shrink-0 bg-[#0e1423] border-b lg:border-b-0 lg:border-r border-border-color flex-col overflow-hidden ${activeWorkspaceTab === 'evidence' ? 'flex' : 'hidden lg:flex'}`}>
+        <div className={`w-full lg:w-[380px] shrink-0 bg-[#0e1423] border-b lg:border-b-0 lg:border-r border-border-color flex-col overflow-hidden flex-1 lg:flex-none min-h-0 ${activeWorkspaceTab === 'evidence' ? 'flex' : 'hidden lg:flex'}`}>
           <DocumentInput
             documents={documents}
             onAddDocument={handleAddDocument}
@@ -172,7 +172,7 @@ function App() {
             </div>
           </div>
         ) : (
-          <div className={`flex-1 flex flex-col min-w-0 ${activeWorkspaceTab === 'timeline' ? 'flex' : 'hidden lg:flex'}`}>
+          <div className={`flex-1 flex flex-col min-w-0 min-h-0 ${activeWorkspaceTab === 'timeline' ? 'flex' : 'hidden lg:flex'}`}>
             <TimelineView
               events={events}
               selectedEventId={selectedEvent?.id || null}
