@@ -55,7 +55,7 @@ export const ExportControls: React.FC<ExportControlsProps> = ({ events }) => {
     window.print();
   };
 
-  const btnClasses = "inline-flex items-center justify-center gap-1.5 font-sans text-[0.875rem] font-semibold rounded-lg border cursor-pointer transition-all duration-150 text-decoration-none outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-border-color/50 border-border-color text-text-primary hover:bg-border-color hover:border-border-hover py-2 px-3.5 shadow-sm active:scale-[0.98]";
+  const btnClasses = "inline-flex items-center justify-center gap-1.5 font-sans text-[0.875rem] font-semibold rounded-lg border cursor-pointer transition-all duration-150 text-decoration-none outline-none disabled:opacity-50 disabled:cursor-not-allowed bg-border-color/50 border-border-color text-text-primary hover:bg-border-color hover:border-border-hover py-2 px-2.5 sm:px-3.5 shadow-sm active:scale-[0.98]";
 
   return (
     <div className="flex gap-2">
@@ -65,14 +65,14 @@ export const ExportControls: React.FC<ExportControlsProps> = ({ events }) => {
         disabled={events.length === 0}
         title="Download spreadsheet-compatible CSV file"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-0.5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:mr-0.5 shrink-0">
           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
           <polyline points="14 2 14 8 20 8"></polyline>
           <line x1="16" y1="13" x2="8" y2="13"></line>
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        Export CSV
+        <span className="hidden sm:inline">Export CSV</span>
       </button>
 
       <button 
@@ -81,13 +81,13 @@ export const ExportControls: React.FC<ExportControlsProps> = ({ events }) => {
         disabled={events.length === 0}
         title="Download JSON structure"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-0.5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:mr-0.5 shrink-0">
           <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
           <line x1="7" y1="2" x2="7" y2="22"></line>
           <line x1="17" y1="2" x2="17" y2="22"></line>
           <line x1="2" y1="12" x2="22" y2="12"></line>
         </svg>
-        Export JSON
+        <span className="hidden sm:inline">Export JSON</span>
       </button>
 
       <button 
@@ -96,12 +96,12 @@ export const ExportControls: React.FC<ExportControlsProps> = ({ events }) => {
         disabled={events.length === 0}
         title="Print timeline report"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-0.5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:mr-0.5 shrink-0">
           <polyline points="6 9 6 2 18 2 18 9"></polyline>
           <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
           <rect x="6" y="14" width="12" height="8"></rect>
         </svg>
-        Print
+        <span className="hidden sm:inline">Print</span>
       </button>
     </div>
   );

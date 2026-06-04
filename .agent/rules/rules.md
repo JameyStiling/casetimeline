@@ -46,6 +46,8 @@ Definitive guidelines for writing idiomatic React, Node.js, and Tailwind CSS v4 
 - **State Management**: Keep local state as close to the tree as possible. Avoid pushing global state to Context unnecessarily.
   - **Props Drilling Limit**: Limit props routing to 2 levels deep max. Centralize context or custom state handlers for anything deeper.
   - **No Synchronous State Updates in Effects**: Never call `setState` synchronously within the body of a `useEffect` on mount. Seeding initial states dynamically via lazy state initializers is preferred.
+- **Mobile-Friendly Layouts**: All user interface views, dashboards, tables, modals, and input panels must be fully responsive and support mobile layouts (widths down to 320px). Use Tailwind responsive classes (`sm:`, `md:`, `lg:`) to adjust flex orientations, grid columns, headers, and paddings dynamically. Avoid fixed-width elements (like `w-[400px]`) on screens smaller than those dimensions, using values like `w-full max-w-[...]` instead. Hide text labels or display icon-only buttons on small screens to prevent layout overflows.
+
 
 ---
 

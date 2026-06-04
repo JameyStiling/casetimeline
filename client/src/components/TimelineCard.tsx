@@ -29,7 +29,7 @@ export const TimelineCard: React.FC<TimelineCardProps> = ({
   return (
     <div className="relative w-full" id={`event-node-${event.id}`}>
       <div 
-        className={`absolute left-[-2rem] top-6 translate-x-[-50%] w-3 h-3 rounded-full bg-main border-[2.5px] z-[2] transition-all duration-150 ${categoryBorderColors[event.category]}`}
+        className={`absolute left-[-1.5rem] sm:left-[-2rem] top-6 translate-x-[-50%] w-3 h-3 rounded-full bg-main border-[2.5px] z-[2] transition-all duration-150 ${categoryBorderColors[event.category]}`}
       />
       <div 
         className={`bg-card border rounded-xl p-5 cursor-pointer transition-all duration-200 flex flex-col gap-3 hover:border-border-hover hover:shadow-lg hover:-translate-y-0.5 ${isSelected ? 'border-brand-primary shadow-[0_0_20px_rgba(99,102,241,0.15)]' : 'border-border-color'}`}
@@ -61,10 +61,10 @@ export const TimelineCard: React.FC<TimelineCardProps> = ({
               onSelect(event);
             }}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="mr-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="mr-0.5 shrink-0">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
             </svg>
-            Cite: {event.citation.sourceDoc}
+            <span className="max-w-[145px] sm:max-w-none truncate">Cite: {event.citation.sourceDoc}</span>
           </div>
 
           <div className="flex items-center gap-1" onClick={(e) => e.stopPropagation()}>

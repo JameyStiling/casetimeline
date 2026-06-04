@@ -28,8 +28,8 @@ export const VerticalTimeline: React.FC<VerticalTimelineProps> = ({
   }
 
   return (
-    <div className="flex-1 overflow-y-auto p-8 relative flex justify-center w-full">
-      <div className="relative flex flex-col gap-6 w-full max-w-[750px] pl-8 border-l-2 border-border-color">
+    <div className="flex-1 overflow-y-auto p-4 sm:p-6 md:p-8 relative flex justify-center w-full">
+      <div className="relative flex flex-col gap-6 w-full max-w-[750px] pl-6 sm:pl-8 border-l-2 border-border-color">
         {events.map((event) => (
           <TimelineCard
             key={event.id}

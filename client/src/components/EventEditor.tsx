@@ -83,7 +83,7 @@ export const EventEditor: React.FC<EventEditorProps> = ({
         </FormField>
 
         {/* Dates */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <FormField label="Chronological Date (YYYY-MM-DD)*">
             <Input
               type="date"
@@ -103,7 +103,7 @@ export const EventEditor: React.FC<EventEditorProps> = ({
         </div>
 
         {/* Category & Confidence */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <FormField label="Category">
             <Select
               value={category}

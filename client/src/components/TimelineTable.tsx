@@ -32,9 +32,10 @@ export const TimelineTable: React.FC<TimelineTableProps> = ({
   const iconBtnClass = "bg-transparent border-none text-text-muted hover:bg-border-color hover:text-text-primary cursor-pointer flex items-center justify-center p-1.5 rounded-md transition-all duration-150";
 
   return (
-    <div className="flex-1 overflow-y-auto p-6 w-full">
-      <table className="w-full border-collapse text-left text-[0.875rem]">
-        <thead>
+    <div className="flex-1 overflow-auto p-4 sm:p-6 w-full">
+      <div className="inline-block min-w-full align-middle overflow-x-auto">
+        <table className="w-full min-w-[750px] border-collapse text-left text-[0.875rem]">
+          <thead>
           <tr>
             <th className={`${thClass} w-[15%]`}>Normalized Date</th>
             <th className={`${thClass} w-[15%]`}>Written Date</th>
@@ -103,7 +104,8 @@ export const TimelineTable: React.FC<TimelineTableProps> = ({
             );
           })}
         </tbody>
-      </table>
+        </table>
+      </div>
     </div>
   );
 };

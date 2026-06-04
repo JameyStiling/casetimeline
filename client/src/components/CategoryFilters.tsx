@@ -22,7 +22,7 @@ export const CategoryFilters: React.FC<CategoryFiltersProps> = ({
   ];
 
   return (
-    <div className="flex gap-2 py-3 px-8 bg-[#131a2b]/15 border-b border-border-color overflow-x-auto shrink-0">
+    <div className="flex gap-2 py-3 px-4 sm:px-8 bg-[#131a2b]/15 border-b border-border-color overflow-x-auto shrink-0">
       {categories.map((cat) => (
         <Badge
           key={cat.value}

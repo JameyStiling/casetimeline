@@ -12,7 +12,7 @@ export const CitationViewer: React.FC<CitationViewerProps> = ({ event, onClose }
   const confidence = event?.citation?.confidence || 'medium';
 
   return (
-    <div className={`absolute right-0 top-0 bottom-0 w-[400px] bg-[#0e1423] border-l border-border-color shadow-2xl flex flex-col z-[5] transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+    <div className={`absolute right-0 top-0 bottom-0 w-full sm:w-[400px] bg-[#0e1423] border-l border-border-color shadow-2xl flex flex-col z-[5] transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
       <div className="flex justify-between items-center p-5 border-b border-border-color">
         <h3 className="font-display text-[1.1rem] font-semibold text-text-primary">Source Citation Detail</h3>
         <button 

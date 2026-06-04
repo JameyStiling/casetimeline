@@ -25,7 +25,7 @@ export const DocumentInput: React.FC<DocumentInputProps> = ({
   isExtracting,
 }) => {
   return (
-    <div className="w-[380px] shrink-0 bg-[#0e1423] border-r border-border-color flex flex-col p-6 gap-6 overflow-hidden">
+    <div className="w-full h-full flex flex-col p-4 sm:p-6 gap-6 overflow-hidden">
       <div className="flex items-center justify-between font-display text-[1.05rem] font-bold text-text-primary border-b border-border-color pb-4">
         <span>Case Evidence & Notes</span>
         <span className="text-[0.65rem] font-semibold uppercase bg-brand-primary/15 text-brand-primary px-2 py-0.5 rounded-full border border-brand-primary/30">
